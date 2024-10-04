@@ -1,6 +1,15 @@
-nav{
+:root {
+    --heading-background-color: steelblue;
+    --heading-text-color: steelblue;
+    --heading-font: 'Times New Roman', sans-serif;
+    --padding: 1rem;
+    --border: 2px solid rgba(0,0,0,0.2);
+}
+
+nav {
     background-color: steelblue;
-    padding:10px;}
+    padding:10px;
+}
 
 main { max-width: 840px;}
  main img{
