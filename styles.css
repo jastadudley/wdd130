@@ -1,7 +1,7 @@
 :root {
     --heading-background-color: steelblue;
     --heading-text-color: steelblue;
-    --heading-font: 'Times New Roman', sans-serif;
+    --heading-font: 'Roboto', sans-serif;
     --padding: 1rem;
     --border: 2px solid rgba(0,0,0,0.2);
 }
@@ -14,7 +14,7 @@
 
 body {
     font-size:16px;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav {
