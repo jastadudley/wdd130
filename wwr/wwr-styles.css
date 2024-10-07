@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #fce172;
+    --secondary-color: #164267;
+    --accent-color: #7cc8da;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.logo-box img {
+    display: block;
+    margin: 10px auto;
+    width: 175px;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #fff;
+    padding: 30px;
+    border: 2px solid black;
+}
+
+nav a:hover {
+    color: #7cc8da;
+}
+
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero img {
+    float: left;
+    margin-right: 20px;
+    width: 300px;
+    height: auto;
+}
+
+h1, h2 {
+    font-family: 'Cabin Sketch', sans-serif;
+    color: #164267;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #fce172;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+p {
+    color: #000;
+}
+
+article img {
+    float: left;
+    margin-right: 10px;
+    width: 200px;
+    height: auto;
+}
+
+article p {
+    overflow: hidden;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer img {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+}
