@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta chrset="utf-8">
+    <meta name="viewoirt" content="width=device-width, initial-scale=1">
+    <title>WWD 130 | HTML Form - User Poll</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1> WDD 130| Jasta Dudley | HTML Form - User Poll</h1>
+    <link rel="stylesheet" href="styles/poll-form.css">
+</header>
+<Main>
+    <form>
+        <feildset>
+            <legend>Contact Information</legend>
+            <div class="form-item column2">
+                <label for="fullname">Full Name:</label>
+                <input type="texxt" id="fullname" name="fullname">
+            </div>
+            <div class="form-item column2">
+                <label for="useremil">Email:</label>
+                <input type="email" id="useremail" name="useremail">
+            </div>
+        </feildset>
+        <feildset>
+            <legend>Questions</legend>
+            <div class="form-item column2">
+            <label for="browser">What is your favorite internet browser?</label>
+            <select id="browser" name="browser">
+            </div>
+                <option value="chrome">Chrome</option>
+                <option value="firefox">Firefox</option>
+                <option value="safari">Safari</option>
+                <option value="edge">Edge</option>
+                <option value="brave">Brave</option>
+                <option value="other">Other</option>
+            </select>
+            <div class="form-item column2">
+            <label for="pet">Do you have a household pet?</label>
+            <input type="checkbox" id="pet" name="pet">
+            </div>
+            <div class="form-item column2">
+            <label for="feedback">list the places you have lived:</label>
+            <textarea id="feedback" name="feedback" rows="4" palceholder="Stillwater Flordia, Essex Connecticut, Florence Arizona, Cancun Mexico"></textarea>
+            </div>
+        </feildset>
+        <button type=""submit>Submit Poll</button>
+    </form>
+</Main>
+<footer>
+    <p>&copy;2024 | HTML Form - User Poll Activity | Jasta Dudley</p>
+</footer>
+</body>
+</html>

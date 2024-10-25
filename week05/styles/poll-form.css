@@ -1,0 +1,106 @@
+/*universal selector*/
+*{
+    margin: 0;
+    padding: 5;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    background: #fff;
+}
+
+header {
+    margin: 0 auto;
+    width: 650;
+}
+
+/* WDD 130 | Jasta Dudley| HTML - title @ the top */
+h1 {
+    margin: 1rem;
+    font-size: 1.5em;
+    color: navy;
+    text-align: center;
+}
+
+/*makes it look like a box*/
+form {
+    width: 650px;
+    margin: auto;
+    padding: 2rem;
+    border: 2px solid rgba (0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background-color: #eee;
+    display: grid;
+} 
+
+fieldset {
+    display: grid;
+    grid-gap:.5rem;
+    margin: 3rem;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+}
+
+/*inside the box tite headings */
+legend {
+    padding: 0.5rem;
+    color: navy;
+    font-size: 1.3;
+}
+
+label, input, button, select, textarea {
+    font-family: Arimo, arial;
+}
+
+label {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+/*effects the input boxes look */
+input, select, textarea {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+}
+.form-item {
+    display: grid;
+    align-items: center;
+}
+column1 {
+    grid-template-columns: 3fr 1fr;
+    margin: 0.5rem 0;
+}
+.column2 {
+    grid-template-columns: 1fr 2fr;
+}
+
+/*button */
+button {
+    margin: 1rem;
+    background-color: navy;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    padding: .75rem;
+    font-size: 1.2rem;
+}
+button:hover {
+    background-color: darkgreen;
+}
+
+footer {
+    margin: 1rem auto 0;
+    width: 650px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    border-top: 1px solid #ccc;
+}
