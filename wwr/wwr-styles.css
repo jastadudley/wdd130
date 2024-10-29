@@ -1,286 +1,570 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
-
 :root {
-    --primary-color: #fce172;
-    --secondary-color: #146267;
-    --accent-color: #5faac4;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Lato', sans-serif;
-    background-color: var(--primary-color);
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    display: grid;
-    grid-template-columns: 2fr 3fr 3fr;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border-bottom: 2px solid black;
-  }
-  
-  header img {
-    width: 200px;
-    height: auto;
-    margin-left: 30px;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    color: var(--accent-color);
-    background-color: white;
-  }
-  
-  /* HERO SECTION */
-  .hero {
-    position: relative;
-    width: 100%;
-    text-align: left;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .hero-img {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    display: block;
-    border-radius: 10px;
-  }
-  
-  /* our mission floating box */
-  article {
-    position: absolute;
-    bottom: 20%;
-    left: 5%;
-    transform: translate(.5%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 15px;
-    border-radius: 8px;
-    max-width: 250px;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.8); 
-    color: #000;
-  }
-  
-  article h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-  }
-  
-  article img {
-    width: 100px;
-    height: auto;
-    float: left;
-    margin-right: 11px;
-    border-radius: 7px;
-  }
-  
-  article p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    clear: both;
-  }
-  
-   /* pesky history section. */
-   #history-section { 
-    padding: 30px;
-  }
-  #history-section h2 {
-    margin-bottom: 15px;
-  }
-  #history-section p {
-    margin-top: 10px;
-    line-height: 1.6;
-  }
-
-  /* ADVENTURE SECTION */
-  #adventure-section { 
-    padding: 30px;
-  }
-  #adventure-section .adventures {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    padding: 20px;
-  }
-  #adventure-section img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-  }
-  #adventure-section img:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  }
-
-  figcaption {
-    padding-top: 5px;
-    text-align: center;
-  }
-  
-
-/* CONTACT PAGE*/
-.cabin-img-container {
-  float: right;
-  width: 300px;
-  margin-left: 20px; 
-  margin-bottom: 20px;
+  --primary-color: #fce172;
+  --secondary-color: #146267;
+  --accent-color: #5faac4;
 }
-
-.cabin-img-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+* {
+  box-sizing: border-box;
 }
-main {
-  padding: 40px;
+body {
+  font-family: 'Lato', sans-serif;
   background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
 }
 
-.contact-information {
-  margin-bottom: 30px;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+
+
+/* ========================
+  Header for all Pages
+======================== */
+header {
+  display: grid;
+  grid-template-columns: 2fr 3fr 3fr;
+  align-items: center;
   padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-bottom: 2px solid black;
 }
-
-iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+header img {
+  width: 200px;
+  height: auto;
+  margin-left: 30px;
 }
-
-#employee-section {
+/* NAVIGATION BAR */
+nav {
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  padding: 10px;
+}
+nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+nav a:hover {
+  color: var(--accent-color);
+  background-color: white;
+}
+
+
+
+/* ========================
+Hero for all Pages 
+======================== */
+.hero {
+  position: relative;
+  height: 90vh;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;/* i am learned */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#contact-form {
+  margin-top: 20px;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Hero Image Styling */
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* Hero Title */
+.hero h1 {
+  position: absolute;
+  bottom: 20px; 
+  left: 20px;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+  margin: 0; 
+}
+
+
+
+
+/* ========================
+Home Page (index.html)
+======================== */
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+  padding: 40px 0;
 }
-
-.employee {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex-basis: 30%;
-}
-
-.manager {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex-basis: 30%;
-}
-
-.employee img {
-  width: 150px;
-  height: auto;
-  border-radius: 50%;
-}
-
-.manager img {
-  width: 200px;
-  width: 150px;
-  height: auto;
-  border-radius: 50%;
-}
-
-.employee h2 {
-  margin: 10px 0 5px;
-}
-
-.employee p {
+.centered-content h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
   margin: 0;
 }
-.employee img:hover, 
-.manager img:hover {
-  transform: scale(1.2);
+.centered-content p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0;
+}
+/* " click here to book your next adventure" Button */
+.centered-content .cta-button {
+  padding: 15px 30px;
+  background-color: #317a8b; /* Correct color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+/* Hover Effect */
+.centered-content .cta-button:hover {
+  background-color: #317a8b;
+  transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
- /* POLL FORM */
 
- #reach\ out {
+
+
+/* ========================
+  Contact Page (contact.html)
+======================== */
+h1, h2, h3 {
+  text-align: center;
+  margin: 10px 0;
+}
+/* Cabin Image Floating Left */
+.cabin-img-container img {
+  float: right;
+  width: 320px;
+  height: auto;
+  margin: 0 20px 10px 0;
+  border-radius: 10px;
+}
+/* IM THE MAP! */
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  margin: 20px 0;
+  display: block;
+}
+/* phone number, address, email */
+#contact-information {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+#contact-information section {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 800px;
+}
+#contact-information section p {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: center; 
+}
+.phone-number p {
+  font-weight: bold;
+  color: var(--secondary-color); 
+}
+#employee-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+.employee {
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.employee img {
+  width: 20%;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+/* Hover Effect on Employee Images */
+.employee:hover img {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.manager {
+  text-align: center;
+}
+.manager img {
+  width: 40%; 
+  border-radius: 50%;
+
+}
+
+
+/* ========================
+  About Us Page (about.html)
+======================== */
+.history-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+}
+.history-content p {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+.history-content img {
+  max-width: 40%; 
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.adventures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+  justify-items: center;
+}
+figure {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+figure img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+figure:hover {
+  transform: scale(1.05);
+}
+figcaption {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+
+/* ========================
+  Trip Page (trips.html)
+======================== */
+#skill-level {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  gap: 15px;
-  margin-bottom: 20px;
+  padding: 60px 20px;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1100px;
 }
-
-#reach\ out h2 {
+#skill-level h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
   margin: 0;
-  color: #000000;
 }
-
-input[type="text"],
-input[type="email"],
-textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box; 
+#skill-level p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
 }
-
-input[type="radio"] {
-  margin-right: 10px;
+#skill-level .cta-button {
+  padding: 15px 30px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none; /* leaned */
 }
-form {
-  width: 80%;
-  max-width: 600px;
+#skill-level .cta-button:hover {
+  background-color: var(--accent-color); 
+}
+/* Centered Trip Section */
+.centered-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #eee;
+  height: auto;
+}
+.centered-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+  padding: 0;
+}
+.centered-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #333;
+  max-width: 800px;
+}
+/* Trip Levels Section */
+.levels {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}
+.trip-option {
+  width: 32%;
+  max-width: 400px;
+  text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.trip-option img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.trip-option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.trip-option h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+.trip-option p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+.trip-option ul {
+  list-style-type: disc;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.trip-option ul li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+/* River Options Section */
+#rivers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+/* Individual River Option Styling */
+.river-option {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.river-option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+/* Image Styling for River Options */
+.river-option img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+/* Optional: H3 and Figcaption Styling */
+.river-option h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+.river-option figcaption {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+}
+/* Table table dates and info */
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  height: auto;
+}
+.trip-table {
+  width: 80%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.trip-table th, 
+.trip-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  color: #333;
+}
+.trip-table th {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+}
+.trip-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.trip-table tbody tr:last-child td {
+  border-bottom: none;
+}
+@media (max-width: 600px) {
+  .trip-table thead {
+    display: none;
+  }
+  .trip-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+   }
+    .trip-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 0.9rem;
+    }
+  .trip-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: var(--secondary-color);
+  }
+}
+/* Testimonials Section */
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+.testimonial {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  max-width: 300px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 400px;
+}
+.testimonial img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: block;
+}
+.testimonial figcaption {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.testimonial p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 10px 0;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #5ca9b8;
-  color: black;
+
+
+
+
+/* ========================
+  All CTA Polls
+======================== */
+.cta {
+  text-align: center;
+  margin: 20px 0;
+}
+.cta-button {
+  padding: 15px 30px;
+  background-color: #317a8b;;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-decoration: none;
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.cta-button:hover {
+  background-color: #317a8b;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+h1 {
+  margin: 1rem;
+  font-size: 1.5em;
+  color: navy;
+  text-align: center;
+}
+/*makes it look like a box*/
+form {
+  width: 650px;
+  margin: auto;
+  padding: 2rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background-color: #fff;
+  display: grid;
 }
 fieldset {
   display: grid;
@@ -289,21 +573,17 @@ fieldset {
   border: 3px solid rgba(0, 0, 0, 0.2);
   padding: 1rem;
 }
-
 /*inside the box tite headings */
 legend {
   padding: 0.5rem;
-  color: var(--secondary-color);
+  color: navy;
   font-size: 1.3rem;
-  font-weight: bold;
 }
-
 label, input, button, select, textarea {
   font-family: Arimo, arial;
 }
-
 label {
-  text-align: left;
+  text-align: right;
   padding-right: 1rem;
 }
 /*effects the input boxes look */
@@ -320,36 +600,51 @@ input[type="checkbox"] {
   display: grid;
   align-items: center;
 }
-
-button:hover {
-  background-color: var(--secondary-color);
+.column1 {
+  grid-template-columns: 3fr 1fr;
+  margin: 0.5rem 0;
+}
+.column2 {
+  grid-template-columns: 1fr 2fr;
+}
+/*button */
+button {
+  margin: 1rem;
+  background-color: #317a8b;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 
-/* FOOTER */
+
+/* ========================
+  Footer
+======================== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: white;
+}
 footer a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
-
 footer a:hover {
-  color: #7cc8da; 
+  color: #7cc8da;
 }
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-   padding: 10px;
-   background-color: var(--secondary-color);
-   color: white;
- }
-  
 footer .social-icons {
   display: flex;
   gap: 10px;
 }
-  
 footer img {
   width: 70px;
   height: auto;
